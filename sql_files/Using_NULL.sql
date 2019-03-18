@@ -1,7 +1,7 @@
 --NULL, INNER JOIN, LEFT JOIN, RIGHT JOIN
 
 --1
-SELECT * FROM teacher WHERE dept IS NULL
+SELECT name FROM teacher WHERE dept IS NULL
 --2
 SELECT teacher.name, dept.name
  FROM teacher INNER JOIN dept
