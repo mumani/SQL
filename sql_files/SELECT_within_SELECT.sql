@@ -44,5 +44,12 @@ SELECT continent, name FROM world x
     (SELECT name FROM world y
         WHERE y.continent=x.continent)
 --Difficult Questions That Utilize Techniques Not Covered In Prior Sections
+SELECT name, continent, population FROM world x WHERE 25000000 > ALL
+    (SELECT population FROM world y
+        WHERE y.continent=x.continent)
 
 --10
+SELECT name, continent FROM world x WHERE population > ALL
+    (SELECT population * 3 FROM world y
+        WHERE y.continent=x.continent AND x.name <> y.name)
+
